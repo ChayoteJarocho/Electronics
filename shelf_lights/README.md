@@ -11,7 +11,7 @@ I added 4 LED strips to my bookshelf:
 
 | Lights off | Lights on |
 |-|-|
-|![Lights off](off.jpg) | ![Lights on](on.jpg) |
+|<img src="off.jpg" width="300" />|<img src="on.jpg" width="300" />|
 
 The lights can be turned off or on through a webpage in the local network.
 
@@ -31,6 +31,8 @@ Here are all the items I used for the circuit:
 - The ESP8266 Arduino module has WiFi capabilities, which controls the relay via the D4 pin: [ESP8266 Arduino board with WiFi](https://smile.amazon.com/gp/product/B076F52NQD/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1).
 - The relay is turned off by default (Normally-Open), and when the ESP8266 D4 pin is turned on, the Relay circuit is closed and the LED lights get powered: [HW-803 5V relay module](https://www.aliexpress.com/i/33044828528.html).
 
+
+The drawing only shows 3 LED strips but in reality my circuit had 4. You may be able to add more LED strips in parallel, but keep in mind that the current will be divided and the light will be dimmer.
 
 ![Circuit](diagram.jpg)
 
