@@ -34,7 +34,7 @@ Here are all the items I used for the circuit:
 
 The drawing only shows 3 LED strips but in reality my circuit had 4. You may be able to add more LED strips in parallel, but keep in mind that the current will be divided and the light will be dimmer.
 
-![Circuit](diagram.jpg)
+<img src="diagram.jpg" width="800" />
 
 ## The code
 
