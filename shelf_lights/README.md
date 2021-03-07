@@ -1,6 +1,6 @@
 # Shelf lights
 
-The purpose of this project is to add LED lights to a bookshelf, and be able to turn them on remotely.
+The purpose of this project is to add LED lights to a bookshelf, and be able to turn them off or on remotely.
 
 ## The finished product
 
@@ -13,7 +13,9 @@ I added 4 LED strips to my bookshelf:
 |-|-|
 |![Lights off](off.jpg) | ![Lights on](on.jpg) |
 
-The ESP8266 module has a small webpage that looks like this:
+The lights can be turned off or on through a webpage in the local network.
+
+The page looks like this:
 
 ![Webpage](webpage.png) |
 
@@ -21,12 +23,14 @@ The ESP8266 module has a small webpage that looks like this:
 
 Here are all the items I used for the circuit:
 
-- [12V power supply adapter](https://smile.amazon.com/gp/product/B00FEOB4EI/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). 
-- [PCB mounting female DC power barrel jack](https://smile.amazon.com/gp/product/B074LK7G86/ref=ppx_yo_dt_b_search_asin_image?ie=UTF8&psc=1).
-- [White ultra bright LED strips](https://vetco.net/products/white-12v-cob-led-strip-with-adhesive-2-pack/vetcob1).
-- [12V to 5V power supply module](https://smile.amazon.com/gp/product/B00HJ6AE72/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1).
-- [HW-803 5V relay module](https://www.aliexpress.com/i/33044828528.html).
-- [ESP8266 Arduino board with WiFi](https://smile.amazon.com/gp/product/B076F52NQD/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1).
+
+- The circuit is powered using a wall plug: [12V power supply adapter](https://smile.amazon.com/gp/product/B00FEOB4EI/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). 
+- The wall plug provides 12V of DC power to the circuit, which is fed to the circuit via a PCB barrel jack: [PCB mounting female DC power barrel jack](https://smile.amazon.com/gp/product/B074LK7G86/ref=ppx_yo_dt_b_search_asin_image?ie=UTF8&psc=1).
+- I use 4 LED strips, connected in parallel, that need to be _indirectly_ fed with the 12V coming from the power plug (the relay decides when power will be provided to the LEDs): [White ultra bright LED strips](https://vetco.net/products/white-12v-cob-led-strip-with-adhesive-2-pack/vetcob1).
+- In the same parallel circuit as the LEDs, I connect a 12V to 5V converter, so I can power the relay and the Arduino module: [12V to 5V power supply module](https://smile.amazon.com/gp/product/B00HJ6AE72/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1).
+- The ESP8266 Arduino module has WiFi capabilities, which controls the relay via the D4 pin: [ESP8266 Arduino board with WiFi](https://smile.amazon.com/gp/product/B076F52NQD/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1).
+- The relay is turned off by default (Normally-Open), and when the ESP8266 D4 pin is turned on, the Relay circuit is closed and the LED lights get powered: [HW-803 5V relay module](https://www.aliexpress.com/i/33044828528.html).
+
 
 ![Circuit](diagram.jpg)
 
