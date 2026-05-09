@@ -20,3 +20,7 @@ mqtt_broker: BROKER_IP
 wifi_ssid: "YOUR_WIFI_SSID"
 wifi_password: "YOUR_WIFI_PASSWORD"
 ```
+
+## Templates
+
+Generic, experimental C code that can be shared among different projects. Does not work as is, needs heavy adaptation.
